@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Jblog by joliment</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Jblog</h1>
+          <h2>Szablon jekyll-bloga dostosowany do Sigmy.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/joliment/jblog/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/joliment/jblog/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/joliment/jblog" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="szablon-jekyll-bloga" class="anchor" href="#szablon-jekyll-bloga"><span class="octicon octicon-link"></span></a>Szablon jekyll-bloga</h1>
+
+<p>Dostosowany do konfiguracji serwera <em>Sigma</em> szablon
+jekyll-bloga.</p>
+
+<h2>
+<a name="instalacja-szablonu" class="anchor" href="#instalacja-szablonu"><span class="octicon octicon-link"></span></a>Instalacja szablonu</h2>
+
+<p>Klikamy w ikonkę <strong>fork</strong> i natępnie klonujemy sforkowanego bloga
+na swoje konto na serwerze <em>Sigma</em>.</p>
+
+<p>Cała procedura może wyglądać tak:</p>
+
+<pre>git clone git@github.com:githubusername/jblog.git blog
+cd blog
+</pre>
+
+<p>co prawdopodobnie w serwerze sigma będzie wymagało klucza ssh ;/ więc klonowanie przez https będzie bardziej wskazane:</p>
+
+<pre>git clone https://github.com/githubusername/jblog.git
+# Clones your fork of the repository into the current directory in terminal
+cd blog
+</pre> 
+
+<h2>
+<a name="jak-zacz%C4%85%C4%87" class="anchor" href="#jak-zacz%C4%85%C4%87"><span class="octicon octicon-link"></span></a>Jak zacząć?</h2>
+
+<p>Wpisy do bloga umieszczamy w katalogu <code>_posts</code>.
+Nazwy plików z postami tworzymy według schematu:</p>
+
+<pre><code>rok-miesiąc-dzień-tytuł.md
+</code></pre>
+
+<p>na przykład:</p>
+
+<pre><code>2013-02-29-jekyll-howto.md
+</code></pre>
+
+<p>Po napisaniu posta generujemy statyczną wersję bloga wykonując
+z katalogu z blogiem, czyli z katalogu <strong>blog/</strong> polecenie:</p>
+
+<pre><code>jekyll --server PORT # testowanie, localhost:PORT
+</code></pre>
+
+<p>Jeśli wszystko jest OK, to wdrażamy bloga na Sigmę:</p>
+
+<pre><code>rake deploy          # uaktualnić DESTINATION
+</code></pre>
+
+<p>Po wykonaniu polecenia blog jest dostępny tutaj:</p>
+
+<pre>http://sigma.ug.edu.pl/~⟨twój login na <b>sigmie</b>⟩/blog
+</pre>
+
+<h2>
+<a name="korzystamy-z-rozszerze%C5%84" class="anchor" href="#korzystamy-z-rozszerze%C5%84"><span class="octicon octicon-link"></span></a>Korzystamy z rozszerzeń</h2>
+
+<p>Jak? Opisane jest to w <a href="http://github.com/rfelix/jekyll_ext">jekyll_ext</a>.</p>
+
+<h1>
+<a name="%C5%9Aci%C4%85ga-z-git-a" class="anchor" href="#%C5%9Aci%C4%85ga-z-git-a"><span class="octicon octicon-link"></span></a>Ściąga z Git-a</h1>
+
+<p>Kilka użytecznych poleceń…</p>
+
+<h2>
+<a name="tracking-branches" class="anchor" href="#tracking-branches"><span class="octicon octicon-link"></span></a>Tracking branches</h2>
+
+<p>Po sforkowaniu projektu, na przykład
+<a href="https://github.com/technomancy/emacs-starter-kit">emacs starter kit</a>
+którego autorem jest <em>technomancy</em>, klonujemy repozytorium
+projektu na swój komputer:</p>
+
+<pre><code>git clone git@github.com:wbzyl/emacs-starter-kit.git
+</code></pre>
+
+<p>Jak nakazują dobre obyczaje, dodajemy oryginalne repozytorium
+do swojego jako <em>remote</em>:</p>
+
+<pre><code>git remote add technomancy git://github.com/technomancy/emacs-starter-kit.git
+</code></pre>
+
+<p>i od razu ściągamy oryginał:</p>
+
+<pre><code>git fetch technomancy
+</code></pre>
+
+<p>Po jakimś czasie zauważamy, że technomancy dodał nową gałąź <strong>v2</strong>:</p>
+
+<pre><code>origin/HEAD -&gt; origin/master
+origin/master
+technomancy/master
+technomancy/v2
+</code></pre>
+
+<p>Oczywiście, natychmiast chcielibyśmy sprawdzić jak działa v2.
+Najwygodniej będzie dodać do swojego repozytorium nową gałąź
+na którą będziemy pobierać nowe wersje <strong>v2</strong> z repozytorium technomancy.</p>
+
+<p>W tym celu tworzymy tzw. <em>tracking branch</em>:</p>
+
+<pre><code>git checkout --track technomancy/v2
+git checkout -b v2.x --track technomancy/v2 # lub tak, zmieniamy nazwę gałęzi na v2.x
+</code></pre>
+
+<p>Teraz polecenie:</p>
+
+<pre><code>git branch -a
+  master
+* v2
+  remotes/origin/HEAD -&gt; origin/master
+  remotes/origin/master
+  remotes/technomancy/master
+  remotes/technomancy/v2
+</code></pre>
+
+<p>pokazuje, że faktycznie jesteśmy jesteśmy na nowej gałęzi.</p>
+
+<p>Różnice w kodzie między gałęziami można sprawdzić bez tworzenia
+nowej gałęzi:</p>
+
+<pre><code>git diff master..technomancy/master
+</code></pre>
+        </section>
+
+        <footer>
+          Jblog is maintained by <a href="https://github.com/joliment">joliment</a><br>
+          
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
