@@ -37,7 +37,160 @@
 <h2>
 <a name="latex" class="anchor" href="#tracking-branches"><span class="octicon octicon-link"></span></a>LaTeX</h2>
 
-<p>Projekt w LaTeX'u został stworzony za pomocą programu TeXMaker oraz pakietu MikTeX dla środowiska Windows 64bit. (Win 8.1 Pro 64bit) Na szczycie tej strony znajdują się <u>paczki LaTeX</u> do pobrania. Zawierają one zdjęcia oryginału, kod źródłowy pliki pomocnicze wygenerowane przez TeXMaker oraz pliki w formacie *.pdf pochodzące bezpośrednio z przekonwertowanego kodu.</p><pre><code>
+<p>Projekt w LaTeX'u został stworzony za pomocą programu TeXMaker oraz pakietu MikTeX dla środowiska Windows 64bit. (Win 8.1 Pro 64bit) Na szczycie tej strony znajdują się <u>paczki LaTeX</u> do pobrania. Zawierają one zdjęcia oryginału, kod źródłowy pliki pomocnicze wygenerowane przez TeXMaker oraz pliki w formacie *.pdf pochodzące bezpośrednio z przekonwertowanego kodu.</p>
+<br>
+<p>Strona pierwsza</p>
+
+
+<pre><code>\documentclass[10pt,b5paper,oneside]{book}
+\usepackage[left=1.9cm,top=1.2cm,right=2.0cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[cp1250]{inputenc}
+
+%\usepackage{multirow}
+%\usepackage{booktabs}
+\usepackage[polish]{babel}
+%\usepackage[active]{srcltx}
+
+\begin{document}
+
+
+
+\noindent 96 {~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~II.~Przekształcenia liniowe}
+\\
+\mbox{ }\\  %%
+\noindent wyniesiemy za nawiasy współrzędne 
+$\zeta_{1},\zeta_{2},\ldots,\zeta_{n}$ wektora x. 
+Znów powtarzając poprzednie rozważania otrzymamy:
+
+$$A(x, x)=\zeta_{1}(a_{11}\bar\eta_{1}+a_{12}\bar\eta_{2}+...+a_{1n}\bar\eta_{n}) +$$
+$$+\zeta_{2}(a_{21}\bar\eta_{1}+a_{22}\bar\eta_{2}+...+a_{2n}\bar\eta_{n})+$$
+$$\cdots\cdots\cdots\cdots\cdots\cdots\cdot\cdot$$
+$$+\zeta_{n}(a_{n1}\bar\eta_{1}+a_{n2}\bar\eta_{2}+...+a_{nn}\bar\eta_{n})=$$
+
+$$=\zeta_{1}\overline{(\bar{a}_{11}\eta_{1}+\bar{a}_{12}\eta_{2}+...+\bar{a}_{1n}\eta_{n}})+$$
+
+$$+\zeta_{2}\overline{(\bar{a}_{21}\eta_{1}+\bar{a}_{22}\eta_{2}+...+\bar{a}_{2n}\eta_{n}})+$$
+$$\cdots\cdots\cdots\cdots\cdots\cdots\cdot\cdot$$
+$$+\zeta_{n}\overline{(\bar{a}_{n1}\eta_{1}+\bar{a}_{n2}\eta_{2}+...+\bar{a}_{nn}\eta_{n}})=(x,A^*y).$$
+
+
+Przy tym macierz przekształcenia $A*$ otrzymuje się z macierzy przekształcenia $A$ w dowolnej bazie ortogonalnej przez przejście do macierzy transponowanej z zamiana jej elementów na liczby zespolone sprzężone.
+
+Zwracamy uwagę, że w bazie nieortogonalnej związek między macierzami przekształceń $A*$ i $A$ jest bardziej złożony.
+\\
+\mbox{ }\\  %%
+\indent\textbf{$\textbf{2}$. Operacja przejścia od przekształcenia $\textit{A*}$ do przekształcenia sprzężonego (operacja *).}
+
+OKREŚLENIE 1. Niech $A$ będzie przekształceniem liniowym przestrzeni euklidesowej zespolonej.
+Przekształcenie $A^*$ określone przez warunek
+
+$$(Ax, y)=(x,A^* y),$$
+nazywamy \textit{przekształceniem liniowym z \textit{A}.}
+
+TWIERDZENIE 2. \textit{W przestrzeni euklidesowej każdemu przekształceniu liniowemu A odpowiada przekształcenie sprzężone i przy tym tylko jedno.} 
+\\
+\mbox{ }\\  %%
+\indent D o w ó d Przekształceniu liniowemu $A$ odpowiada w sposób jednoznaczny zgodnie z twierdzeniem 1 tego paragrafu forma dwuliniowa $A(x,y)=(Ax,y)$. Tę formę dwuliniową można zgodnie z uwaga z końca ustępu 1 przedstawić, i to jednoznacznie, w postaci $(x,A^*y)$.
+
+Ostatecznie mamy
+$$(Ax, y)=A(x; y)= (x,A^* y).$$
+
+Macierz przekształcenia sprzężonego $\textit{A*}$ otrzymuje się z macierzy przekształcenia $\textit{A}$ w bazie ortogonalnej przez przejście do macierzy transponowanej, a następnie do elementów zespolonych 
+sprzężonych, jak zostało dowiedzione w ustępie 1 tego paragrafu. 
+
+\indent Przejście od $\textit{A}$ do $\textit{A}^*$ 
+można wyrazić w postaci reguł.  Jeżeli w wyrażeniu 
+$\textit{(x,A}^* \textit{y})$ chcemy $\textit{A}$ przenieść na drugie
+miejsce to musimy do $\textit{A}$ dopisać $^*$.
+
+Operacja przejścia od przekształcenia $A$ do przekształcenia sprzężonego $A^*$ (operacja$^*$) związana jest z określonymi wyżej operacjami dodawania i mnożenia  
+przekształ-
+
+
+\end{document}
+
+</code></pre>
+
+<br>
+<p>Strona druga</p>
+
+
+<pre><code>\documentclass[10pt,b5paper,oneside]{book}
+\usepackage[left=1.9cm,top=1.2cm,right=2.0cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[cp1250]{inputenc}
+
+%\usepackage{multirow}
+%\usepackage{booktabs}
+\usepackage[polish]{babel}
+%\usepackage[active]{srcltx}
+
+\begin{document}
+
+
+
+{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\textsection 11.Przekształcenie liniowe sprzężone z danym~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}97 
+\\
+\mbox{ }\\  %%
+\noindent ceń liniowych następującymi wzorami: 
+\\
+\mbox{ }\\  %%
+\indent$1^\circ   (AB)^*=B^*A^*,$
+ 
+$2^\circ   (A*)^*=A,$
+ 
+$3^\circ   (A+B)^*=B^*+A^*,$
+ 
+$4^\circ   (\lambda B)^*=B^*A^*,$
+ 
+$5^\circ   E^*=E,$
+ 
+
+Dowiedziemy dla przykładu pierwszych dwóch z tych własności.
+
+$1^\circ$ Z jednej strony mamy $$(ABx,y)=(Bx,A^* y)=(x,B^* A),$$
+
+\noindent a z drugiej strony zgodnie z określeniem $(AB)^*$
+
+$$(ABx,y)=(x,(AB)^* y).$$
+
+\noindent Porównując lewe strony tych dwóch równości i pamiętając, że przekształcenie liniowe jest wyznaczone jednoznacznie przez odpowiednią formę dwuliniową, otrzymujemy
+
+$$(AB)^*=B^* A^8).$$
+
+%%
+
+$2^\circ$ Zgodnie z określeniem $a^*$ mamy $$(Ax,y)=(x,A^* y).$$
+
+\noindent Oznaczamy chwilowo $A*$ przez $C.$ Wówczas
+ 
+$$(Ax,y)=(x,Cy),$$
+
+\noindent skąd
+
+$$(y,Ax)=(Cy,x).$$
+
+\noindent Zastępując $y$ przez x, a x przez y i zamieniając miejscami strony tej równości otrzymamy
+
+$$(Cx,y)=(x,Ay).$$
+
+\noindent Równość ta oznacza, że $C^*=A$, a ponieważ $C=A^*$,więc
+
+$$(A^*)^*=A.$$
+
+\textbf{Ćwiczenia.1.} Dowieść w podobny sposób równości $3^\circ$ - $5^\circ.$
+\textbf{2.} Dowieść równości $1^\circ$ - $5^\circ.$, korzystając z tego że macierz przekształcenia $A^*$ otrzymuje się z macierzy przekształcenia A w bazie ortogonalnej przez transportowanie i zastąpienie wszystkich elementów liczbami zespolonymi sprzężonymi.
+
+\textbf{3.} \textbf{Przekształcenia liniowe samosprzężone, unitarne i normalne.} Operacja $^*$ jest w pewnej mierze analogiczna do operacji przejścia od danej liczby zespolonej $\alpha$ do liczby zespolonej sprzężonej sprzężonej $\alpha$. Analogia ta nie jest przypadkowa. Rzeczywiście dla macierzy pierwszego stopnia nad ciałem zespolonym. tj. dla liczb zespolonych, operacja $^*$ polega właśnie na zastąpieniu danej liczby liczbą zespoloną sprzężoną.
+\\
+\mbox{ }\\  %%
+\footer{$7$ Wykłady z algebry liniowej}
+
+
+\end{document}
+
+
 </code></pre>
 
 <br>
